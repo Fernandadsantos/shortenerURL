@@ -1,48 +1,57 @@
 *{
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-body { 
+body {  
   font-size: 16px; 
   background-color:#0a0a0a;
   text-align: center;
-  line-height: 1.4em;
+  line-height: 1.4em;  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+ 
 
-main {
-  padding: 0;
-  margin-top: 40px;
-}
-
-h1{
-  margin-top: 30px; 
-  font-size: 40px;
+h1{ 
+  font-size: 70px;
   color: #2574a9c5;
 }
-
-.user-stories li {
-  margin-bottom: 1em;
-}
+ 
 
 a {
   color: #2574a9;
 }
 
+.form-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 form {
-  margin: 10px auto; 
-  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 20px;  
 }
 
 .subtitle {    
-  margin-bottom: 30px;
+  font-weight: 500; 
+  font-size: 28px;
+  padding-bottom: 30px;
   color: #fff; 
 }
 
 #url_input{  
-  width: 500px; 
+  width: 600px; 
 }
 
 input { 
+  font-size: 20px;
   padding: 6px; 
   text-align: center;
   border: none;
@@ -55,7 +64,9 @@ input {
   color: #fff;
   border: none;
   border-radius: 4px; 
-  font-size: 15px; 
+  font-size: 18px;
+  height: 42px;   
+  width: 110px;
   cursor: pointer;
 }
 
@@ -64,6 +75,9 @@ input[type='text'] {
 }
 
 .footer{
-  margin-top: 50px; 
+  width: 100%;
+  align-self: center;
+  position: fixed; 
+  bottom: 0;
   color: #fff;
 }

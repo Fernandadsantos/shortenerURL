@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encurtada</title> 
+</head>
+<body>
+    <h2>URL Encurtada com Sucesso!</h2>
+    <p>URL Original: <span id="originalUrl"></span></p>
+    <p>URL Encurtada: <a id="shortUrl" href="#" target="_blank"></a></p>
+    <br>
+    <a href="/">Voltar</a> 
+    <script>  
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("originalUrl").textContent = params.get("original");
+        const shortUrl = document.getElementById("shortUrl");
+        shortUrl.textContent = window.location.origin + "/api/shorturl/" + params.get("short");
+        shortUrl.href = "/api/shorturl/" + params.get("short");
+    </script>
+</body>
+</html>
