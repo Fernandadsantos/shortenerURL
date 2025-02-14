@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Encurtada</title> 
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    /> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Shortened URL</title> 
 </head>
-<body>
-    <h2>URL Encurtada com Sucesso!</h2>
-    <p>URL Original: <span id="originalUrl"></span></p>
-    <p>URL Encurtada: <a id="shortUrl" href="#" target="_blank"></a></p>
-    <br>
-    <a href="/">Voltar</a> 
-    <script>  
-        const params = new URLSearchParams(window.location.search);
-        document.getElementById("originalUrl").textContent = params.get("original");
+<body class="body-result">
+    <section class="container">
+        <div class="text-container text-container-result"> 
+            <h1>URL Encurtada com Sucesso!</h1>
+            <div class="text-result">
+                <p class=" subtitle-result">URL Original: <span id="originalUrl"></span></p>
+                <p class=" subtitle-result">URL Encurtada: <a id="shortUrl" href="#" target="_blank"></a></p> 
+                <button class="btn btn-result">
+                    <a href="/" >Voltar</a> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>By <a href="https://github.com/Fernandadsantos">Fernanda Santos</a></p>
+    </footer>
+        <script>  
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("originalUrl").textContent = params.get("original");
         const shortUrl = document.getElementById("shortUrl");
         shortUrl.textContent = window.location.origin + "/api/shorturl/" + params.get("short");
         shortUrl.href = "/api/shorturl/" + params.get("short");

@@ -1,10 +1,10 @@
 *{
   font-family: "Poppins", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 
-body {  
+.body-index,.body-result {  
   font-size: 16px; 
   background-color:#0a0a0a;
   text-align: center;
@@ -13,19 +13,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
  
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+} 
 
 h1{ 
   font-size: 70px;
   color: #2574a9c5;
 }
  
+.text-result{
+
+  width: 80%; 
+  align-self: center;
+}
+ 
 
 a {
+  text-decoration-line: none;
   color: #2574a9;
 }
-
+ 
 .form-section{
   display: flex;
   flex-direction: column;
@@ -39,11 +57,25 @@ form {
   gap: 20px;  
 }
 
-.subtitle {    
+.subtitle, .subtitle-result {    
   font-weight: 500; 
   font-size: 28px;
   padding-bottom: 30px;
   color: #fff; 
+}
+
+.subtitle-result{
+  color: #2574a9; 
+  font-size: 30px;
+}
+
+#originalUrl, #shortUrl{
+  color: #fff;
+  font-size: 26px;
+}
+ 
+#originalUrl:hover, #shortUrl:hover{
+  color: #a3cfec;
 }
 
 #url_input{  
@@ -63,8 +95,8 @@ input {
   background-color: #2574a956;
   color: #fff;
   border: none;
-  border-radius: 4px; 
-  font-size: 18px;
+  border-radius: 10px; 
+  font-size: 19px;
   height: 42px;   
   width: 110px;
   cursor: pointer;
@@ -76,8 +108,26 @@ input[type='text'] {
 
 .footer{
   width: 100%;
-  align-self: center;
+  display: flex;
+  justify-content: center; 
   position: fixed; 
-  bottom: 0;
+  bottom: 5px;
   color: #fff;
+  font-size: 20px;
+
+  a{
+    color: #fff; 
+  }
+
+  a:hover{
+    color: #2574a9b7;
+    font-weight: 600;
+  }
+}
+ 
+.btn-result{
+  width: 100px; 
+  a{
+    color: #fff;
+  }
 }
